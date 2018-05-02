@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>
+      <span class="button-left">取消</span>
+      登录
+      <span class="button-right">注册</span>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="login-way">
+      <div class="login-chose" [ngClass]="{'Selected':name == 'a'}"  (click)="changeClass('a')">
+        <p>手机登录</p>
+        <ion-icon *ngIf="name == 'a'" name="md-arrow-dropup"></ion-icon>
+      </div>
+      <div class="login-chose" [ngClass]="{'Selected':name == 'b'}"  (click)="changeClass('b')">
+        <p>账号登陆</p>
+        <ion-icon *ngIf="name == 'b'" name="md-arrow-dropup"></ion-icon>
+      </div>
+    </div>
+
+    <div class="phone-login-Info" *ngIf="name == 'a'">
+      <ion-item>
+        <ion-label fixed>账号</ion-label>
+        <ion-input type="text" placeholder="请输入账号" [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>密码</ion-label>
+        <ion-input type="password" placeholder="请输入密码" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="number-login-Info" *ngIf="name == 'b'">
+      dasdasdasdasd
+    </div>
+
+
+  <div style="text-align: center; margin-left: 30px; margin-right: 30px;">
+    <button ion-button block color="blue" (click)="logIn(username,password)">
+      登录
+    </button>
+  </div>
+</ion-content>

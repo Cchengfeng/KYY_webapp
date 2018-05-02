@@ -1,0 +1,63 @@
+login-content{
+  //头部样式
+  .toolbar-background{
+    background-color:rgba(25, 158, 216, 1);
+  }
+  .toolbar-title{
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .title{
+    padding:15px 0px 0px 0px;
+  }
+
+  .button-left{
+    float: left;
+    margin-left: 2rem;
+  }
+  .button-right{
+    float: right;
+    margin-right: 2rem;
+  }
+  .toolbar-title-md {
+    text-align: center;
+  }
+  .content{
+    margin-top: 0.1rem;
+  }
+  .login-way{
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .login-chose{
+    background-color: rgba(25, 158, 216, 1);
+    color: white;
+    text-align: center;
+    flex:0.498;
+  }
+  .login-chose p{
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+  .login-chose ion-icon{
+    font-size: 3rem;
+    margin-top: -1.5rem;
+    color: white;
+  }
+
+  .Selected{
+    color:black;
+  }
+  .account-number{
+    margin-top: 4rem;
+  }
+  .up:before{
+    content: "\f28c";
+  }
+
+
+
+}
