@@ -10,10 +10,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { NewsPage } from '../pages/news/news';
 import { PersonalCenterPage } from '../pages/personalCenter/personalCenter';
+import {Md5} from "ts-md5/dist/md5";
+import {AppService} from "./app.service";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {HttpClientModule} from '@angular/common/http';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 @NgModule({
   declarations: [
@@ -27,9 +31,10 @@ import {HttpClientModule} from '@angular/common/http';
     PersonalCenterPage
   ],
   imports: [
-    HttpClientModule,    
+    HttpClientModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,8 +48,10 @@ import {HttpClientModule} from '@angular/common/http';
     PersonalCenterPage
   ],
   providers: [
+    Md5,
     StatusBar,
     SplashScreen,
+    AppService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -34,7 +34,17 @@
     </div>
 
     <div class="number-login-Info" *ngIf="name == 'b'">
-      dasdasdasdasd
+      <!-- 日期插件 -->
+      <!-- <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item> -->
+
+      <ion-item ng-repeat="item in items">
+        Hello, {{item}}!
+      </ion-item>
+
+
     </div>
 
 
